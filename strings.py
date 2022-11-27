@@ -4,7 +4,7 @@ Functions for string manipulation.
 from __future__ import annotations
 
 import re
-import strings.case_switcher
+import _strings.case_switcher
 
 
 def snake_to_pascal(snake_case_text: str) -> str:
@@ -15,10 +15,10 @@ def snake_to_pascal(snake_case_text: str) -> str:
      single "word" so this function does not respect whitespace.
     :return: The string in Pascal case.
     """
-    return strings.case_switcher.switch_case(
+    return _strings.case_switcher.switch_case(
         text=snake_case_text,
-        from_case=strings.case_switcher.Case.SNAKE_CASE,
-        to_case=strings.case_switcher.Case.PASCAL_CASE
+        from_case=_strings.case_switcher.Case.SNAKE_CASE,
+        to_case=_strings.case_switcher.Case.PASCAL_CASE
     )
 
 
